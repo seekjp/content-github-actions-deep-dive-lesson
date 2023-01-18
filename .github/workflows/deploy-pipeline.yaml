@@ -8,6 +8,10 @@ jobs:
     steps: 
       - name: Check out code
         uses: actions/checkout@v2
+      - name: Setup Teller
+        uses: spectralops/setup-teller@v1
+      - name: Run a Teller task
+        run: teller run scan        
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
