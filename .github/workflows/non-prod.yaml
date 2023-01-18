@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read    
     env:
       BUCKET_NAME: cfst-3457-d7cf858686255903632b7341e-nonprodbucket-1mw5khpdml8g6
     steps:
